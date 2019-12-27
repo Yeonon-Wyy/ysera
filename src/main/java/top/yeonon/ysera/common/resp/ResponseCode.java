@@ -19,10 +19,14 @@ public enum  ResponseCode {
     NOT_EXIST_TOKEN_IN_HEADER(4, "not exist token in header"),
     UPLOAD_FILE_ERROR(5, "upload file error"),
     JSON_PARSE_ERROR(6, "JSON parse error"),
-    SERVICE_ERROR(99, "internal service error")
+    SERVICE_ERROR(99, "internal service error"),
 
 
     //800~899 mean user service error code
+    PHONE_NUMBER_DUPLICATE(800, "phone number duplicate error"),
+    PHONE_NUMBER_OR_PASSWORD_ERROR(801, "phone number or password error"),
+    USER_ALREADY_LOGIN(802, "user already login"),
+    USER_ID_ERROR(803,"user id error")
     ;
 
     private int code;

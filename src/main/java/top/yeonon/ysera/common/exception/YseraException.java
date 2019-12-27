@@ -11,7 +11,7 @@ public class YseraException extends Exception {
 
     private int code;
 
-    public YseraException(String message, int code) {
+    public YseraException(int code, String message) {
         super(message);
         this.code = code;
     }

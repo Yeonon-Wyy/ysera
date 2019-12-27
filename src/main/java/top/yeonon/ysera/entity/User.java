@@ -4,6 +4,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import java.util.Date;
 
 /**
@@ -31,7 +34,7 @@ public class User {
     private String nickname;
 
     @Column(name = "gender", length = 2, nullable = false)
-    private int gender;
+    private Integer gender;
 
     @Column(name = "create_time", nullable = false)
     private Date createTime;
@@ -39,7 +42,7 @@ public class User {
     @Column(name = "update_time", nullable = false)
     private Date updateTime;
 
-    public User(String phoneNumber, String password, String nickname, int gender) {
+    public User(String phoneNumber, String password, String nickname, Integer gender) {
         this.phoneNumber = phoneNumber;
         this.password = password;
         this.nickname = nickname;
